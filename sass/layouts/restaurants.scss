@@ -1,10 +1,12 @@
 @use "../utils/couleurs.scss";
+@use "../utils/gradient.scss";
 
 .restaurants {
 
     background-color: couleurs.$lightgrey;
-    padding: 0 3rem;
-    margin-bottom: 2rem;
+    padding: 0 3rem 5rem;
+    margin-bottom: -3rem;
+
 
     & .restaurants__carte {
         display: grid;
@@ -23,7 +25,7 @@
             background-color: couleurs.$turquoise;
             color: couleurs.$green;
             position: absolute;
-            left: 16rem;
+            left: 35rem;
             top: 1rem;
             width: 5rem;
             height: 2rem;
@@ -36,7 +38,7 @@
     & .carte {
 
         &__photo {
-            height: 13rem;
+            height: 12rem;
             background-size: cover;
             border-radius: 15px 15px 0px 0px;
 
@@ -50,16 +52,39 @@
 
         &__description {
             position: relative;
+            background-color: white;
+            border-radius: 0px 0px 15px 15px;
 
             h3,
-            p { 
-                margin: 0.5rem;
+            p {
+                padding: 0.5rem;
+            }
+
+            p{
+                margin-top: -0.5rem;
             }
             i {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 position: absolute;
                 right: 1rem;
-                top: 0.4rem;
+                top: 1.5rem;
+                
+            }
+
+            .animate {
+
+                opacity: 0;
+                font-family: FontAwesome;
+                color: transparent;
+                @include gradient.gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
+                transition: all 0.3s ease-in-out;
+
+            }
+
+            &:hover .animate {
+                opacity: 1;
                 
             }
         }
