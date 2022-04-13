@@ -11,8 +11,26 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
 main {
   padding: 0rem;
+}
+
+h2 {
+  padding: 1rem 0;
+}
+
+h3,
+p {
+  margin: 0;
 }
 
 header {
@@ -38,12 +56,9 @@ header {
 .explanation {
   text-align: center;
 }
-.explanation h2 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
 .explanation p {
   font-weight: 300;
+  margin-top: 1rem;
 }
 .explanation button {
   border-radius: 40px;
@@ -62,6 +77,7 @@ header {
 }
 
 .how_to {
+  padding: 0 3rem;
   counter-reset: steps;
 }
 .how_to ol {
@@ -94,7 +110,8 @@ header {
   display: grid;
   place-items: center;
   position: absolute;
-  bottom: 1rem;
+  margin: 0;
+  top: 30%;
   left: -0.8rem;
 }
 .how_to li:hover {
@@ -108,8 +125,71 @@ header {
 .how_to i:hover {
   color: #9356DC;
 }
-.how_to h2 {
-  padding: 1rem;
+
+.restaurants {
+  background-color: #eaeaea;
+  padding: 0 3rem;
+  margin-bottom: 2rem;
+}
+.restaurants .restaurants__carte {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 780px) {
+  .restaurants .restaurants__carte {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.restaurants .restaurants__carte .new {
+  position: relative;
+}
+.restaurants .restaurants__carte .new::before {
+  content: "Nouveau";
+  background-color: #99e2d0;
+  color: #008766;
+  position: absolute;
+  left: 16rem;
+  top: 1rem;
+  width: 5rem;
+  height: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3rem 0.3rem;
+}
+.restaurants .carte__photo {
+  height: 13rem;
+  background-size: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants .carte__photo-1 {
+  background-image: url("../../images/photo-1.jpg");
+}
+.restaurants .carte__photo-2 {
+  background-image: url("../../images/photo-2.jpg");
+}
+.restaurants .carte__photo-3 {
+  background-image: url("../../images/photo-3.jpg");
+}
+.restaurants .carte__photo-4 {
+  background-image: url("../../images/photo-4.jpg");
+}
+.restaurants .carte__description {
+  position: relative;
+}
+.restaurants .carte__description h3,
+.restaurants .carte__description p {
+  margin: 0.5rem;
+}
+.restaurants .carte__description i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.4rem;
+}
+
+footer {
+  background-color: #353535;
 }
 
 /*# sourceMappingURL=style.css.map */

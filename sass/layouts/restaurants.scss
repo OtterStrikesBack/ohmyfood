@@ -1,0 +1,68 @@
+@use "../utils/couleurs.scss";
+
+.restaurants {
+
+    background-color: couleurs.$lightgrey;
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+
+    & .restaurants__carte {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width:780px) {
+            grid-template-columns: repeat(1, 1fr);  
+        }
+        gap: 2rem;
+        
+        .new {
+    
+            position: relative;
+        }
+        .new::before {
+            content: "Nouveau";
+            background-color: couleurs.$turquoise;
+            color: couleurs.$green;
+            position: absolute;
+            left: 16rem;
+            top: 1rem;
+            width: 5rem;
+            height: 2rem;
+            font-size: 1rem;
+            text-align: center;
+            padding: 0.3rem 0.3rem;        
+        }
+    }
+
+    & .carte {
+
+        &__photo {
+            height: 13rem;
+            background-size: cover;
+            border-radius: 15px 15px 0px 0px;
+
+        }
+        
+        @for $i from 1 through 4 {
+            &__photo-#{$i}{
+                background-image: url("../../images/photo-#{$i}.jpg");
+            }
+        }
+
+        &__description {
+            position: relative;
+
+            h3,
+            p { 
+                margin: 0.5rem;
+            }
+            i {
+                font-size: 1.5rem;
+                position: absolute;
+                right: 1rem;
+                top: 0.4rem;
+                
+            }
+        }
+        
+    }
+}

@@ -3,6 +3,7 @@
 
 .how_to {
 
+    padding: 0 3rem;
     counter-reset: steps;
     & ol {
         display: flex;
@@ -26,7 +27,8 @@
             display: grid;
             place-items: center;
             position: absolute;
-            bottom: 1rem;
+            margin: 0;
+            top: 30%;
             left: -0.8rem;
         }
         background-color: couleurs.$lightgrey;
@@ -53,8 +55,5 @@
 
     }
 
-    & h2 {
-        padding: 1rem;
-    }
 }
 
