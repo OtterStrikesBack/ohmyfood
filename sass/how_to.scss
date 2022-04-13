@@ -1,0 +1,21 @@
+@use "../sass/utils/box-shadows.scss";
+
+.how_to {
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        @media (max-width: 780px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        background-color: #eaeaea;
+        padding: 1rem 2rem;
+        flex-grow: 1;
+        border-radius: 20px;
+        @include box-shadows.shadows;
+        
+    }
+}
+

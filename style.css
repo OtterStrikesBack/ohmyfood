@@ -11,6 +11,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -19,7 +23,7 @@ header {
   position: relative;
 }
 
-main .ville {
+.ville {
   background-color: #eaeaea;
   padding: 0.5rem;
   display: flex;
@@ -27,25 +31,20 @@ main .ville {
   align-items: center;
   justify-content: center;
 }
-
-main .ville i {
+.ville i {
   font-size: 1.3rem;
 }
 
-/*Expanation */
 .explanation {
   text-align: center;
 }
-
 .explanation h2 {
   margin-top: 2rem;
   font-size: 1.5rem;
 }
-
 .explanation p {
   font-weight: 300;
 }
-
 .explanation button {
   border-radius: 40px;
   box-shadow: 0 4px 4px -2px gray;
@@ -57,14 +56,27 @@ main .ville i {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   transition: opacity, 3s, ease-out, 1s;
 }
-
 .explanation button:hover {
   opacity: 0.9;
   box-shadow: 0 5px 5px -2px #000000;
 }
 
-div {
-  background-color: blue;
+.how_to ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 780px) {
+  .how_to ol {
+    flex-direction: column;
+  }
+}
+.how_to li {
+  background-color: #eaeaea;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px -2px gray;
 }
 
 /*# sourceMappingURL=style.css.map */
