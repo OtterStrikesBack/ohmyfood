@@ -11,6 +11,7 @@
 
 body {
     margin: 0px;
+    font-family:"Roboto", sans-serif;
 }
 
 header {
@@ -18,4 +19,21 @@ header {
     text-align:center;
     box-shadow: 0 0 0.5rem grey;
     padding: 0.3rem;
+    position: relative;
+}
+
+main .ville {
+
+    background-color: #eaeaea;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+main  .ville i {
+
+    font-size: 1.3rem;
+
 }
