@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0rem;
 }
 
 header {
@@ -61,10 +61,13 @@ header {
   box-shadow: 0 5px 5px -2px #000000;
 }
 
+.how_to {
+  counter-reset: steps;
+}
 .how_to ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  list-style-type: none;
 }
 @media (max-width: 780px) {
   .how_to ol {
@@ -72,11 +75,41 @@ header {
   }
 }
 .how_to li {
+  position: relative;
   background-color: #eaeaea;
-  padding: 1rem 2rem;
+  padding: 1.3rem 2rem;
   flex-grow: 1;
   border-radius: 20px;
   box-shadow: 0 4px 4px -2px gray;
+  transition: 0.3s;
+}
+.how_to li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: -0.8rem;
+}
+.how_to li:hover {
+  background-color: #f5edff;
+}
+.how_to i {
+  margin-right: 1rem;
+  color: #8f8b8b;
+  transition: 0.3s;
+}
+.how_to i:hover {
+  color: #9356DC;
+}
+.how_to h2 {
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

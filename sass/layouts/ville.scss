@@ -1,6 +1,8 @@
+@use "../utils/couleurs.scss";
+
 .ville {
 
-    background-color: #eaeaea;
+    background-color: couleurs.$lightgrey;
     padding: 0.5rem;
     display: flex;
     gap: 1rem;

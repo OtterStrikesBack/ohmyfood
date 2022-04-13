@@ -1,21 +1,60 @@
 @use "../sass/utils/box-shadows.scss";
+@use "../sass/utils/couleurs.scss";
 
 .how_to {
+
+    counter-reset: steps;
     & ol {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
         @media (max-width: 780px) {
             flex-direction: column;
         }
+        list-style-type: none;
+
     }
     & li {
-        background-color: #eaeaea;
-        padding: 1rem 2rem;
+        position: relative;
+        &::before {
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: couleurs.$purple;
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            bottom: 1rem;
+            left: -0.8rem;
+        }
+        background-color: couleurs.$lightgrey;
+        padding: 1.3rem 2rem;
         flex-grow: 1;
         border-radius: 20px;
         @include box-shadows.shadows;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: couleurs.$lightpurple;
+        }
         
+    }
+
+    & i{
+        margin-right: 1rem;
+        color: couleurs.$darkergrey;
+        transition: 0.3s;
+
+        &:hover {
+            color: couleurs.$purple;
+        }
+
+    }
+
+    & h2 {
+        padding: 1rem;
     }
 }
 
