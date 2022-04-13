@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+
+
+}
+
+body {
+    margin: 0px;
+    font-family:"Roboto", sans-serif;
+}
+
+header {
+    font-family:"Shrikhand", cursive;
+    text-align:center;
+    box-shadow: 0 0 0.5rem grey;
+    padding: 0.3rem;
+    position: relative;
+}
+
+main .ville {
+
+    background-color: #eaeaea;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+main  .ville i {
+
+    font-size: 1.3rem;
+
+}
+
+/*Expanation */
+
+.explanation {
+
+    text-align:center;
+}
+
+.explanation h2 {
+
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+}
+
+.explanation p {
+
+    font-weight:300;
+}
+
+.explanation button {
+
+    border-radius: 40px;
+    box-shadow: 0 4px 4px -2px gray;
+    color: white;
+    border: none;
+    height: 3.5em;
+    width: 15em;
+    font-size: 15px;
+    background-image: linear-gradient( 0deg,#9356DC,#FF79DA);
+    transition: opacity, 3s, ease-out, 1s;
+}
+
+.explanation button:hover {
+
+    opacity: 0.9;
+    box-shadow: 0 5px 5px -2px #000000;
+    
+}
+
+div {
+    background-color: blue;
+}
