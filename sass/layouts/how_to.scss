@@ -1,5 +1,5 @@
-@use "../sass/utils/box-shadows.scss";
-@use "../sass/utils/couleurs.scss";
+@use "../utils/mix.scss";
+@use "../utils/couleurs.scss";
 
 .how_to {
 
@@ -35,7 +35,7 @@
         padding: 1.3rem 2rem;
         flex-grow: 1;
         border-radius: 20px;
-        @include box-shadows.shadows;
+        @include mix.shadows;
         transition: 0.3s;
 
         &:hover {

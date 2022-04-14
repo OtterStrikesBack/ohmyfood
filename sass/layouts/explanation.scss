@@ -1,6 +1,4 @@
-@use "../utils/box-shadows.scss";
-@use "../utils/gradient.scss";
-
+@use "../utils/mix.scss";
 
 .explanation {
 
@@ -17,13 +15,13 @@
 
     border-radius: 40px;
     //box-shadow: 0 4px 4px -2px gray;
-    @include box-shadows.shadows;
+    @include mix.shadows;
     color: white;
     border: none;
     height: 3.5em;
     width: 15em;
     font-size: 15px;
-    @include gradient.gradient;
+    @include mix.gradient;
     transition: opacity, 3s, ease-out, 1s;
     }
 

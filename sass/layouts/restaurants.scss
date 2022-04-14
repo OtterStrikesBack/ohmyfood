@@ -1,5 +1,5 @@
 @use "../utils/couleurs.scss";
-@use "../utils/gradient.scss";
+@use "../utils/mix.scss";
 
 .restaurants {
 
@@ -76,7 +76,7 @@
                 opacity: 0;
                 font-family: FontAwesome;
                 color: transparent;
-                @include gradient.gradient;
+                @include mix.gradient-heart;
                 background-clip: text;
                 -webkit-background-clip: text;
                 transition: all 0.3s ease-in-out;
