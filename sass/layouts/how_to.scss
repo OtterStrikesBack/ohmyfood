@@ -19,7 +19,7 @@
         &::before {
             content: counter(steps);
             counter-increment: steps;
-            color: white;
+            color: couleurs.$white;
             background-color: couleurs.$purple;
             width: 1.7rem;
             height: 1.7rem;

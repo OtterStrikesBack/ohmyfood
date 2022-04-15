@@ -1,0 +1,196 @@
+@use "../utils/mix.scss";
+@use "../utils/couleurs.scss";
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes checkspin {
+    from {
+        transform: rotate(-280deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+#restaurant-body{
+
+header::before{
+           @include mix.arrow-left;
+           left: 2rem;
+           top: 1rem;
+}    
+.banner {
+    width: 100%; 
+    height: 40vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+.menu_main {
+
+    margin-top: -3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    background-color: couleurs.$lightgrey;
+    border-radius: 40px 40px 0px 0px;
+
+}
+
+.menu_top {
+
+    position: relative;
+
+    h2 {
+        font-family: "Shrikhand", "cursive";
+        padding: 1.5rem;
+    }
+
+    & i {
+        font-size: 1.9rem;
+        position: absolute;
+        right: 2rem;
+        top: 1.3rem;
+        
+    }
+
+    & .animate {
+
+        opacity: 0;
+        font-family: FontAwesome;
+        color: transparent;
+        @include mix.gradient-heart;
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    &:hover .animate {
+        opacity: 1;
+    
+    }
+
+}
+
+.menu {
+    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem;
+        gap: 1rem;
+        @media (max-width:768px) {
+        grid-template-columns: repeat(1, 1fr);  
+        }
+    h3 {
+        text-transform: uppercase;
+        font-weight: 100;
+        position: relative;
+        &::after {
+            content:"";
+            position: absolute;
+            height: 0.2rem;
+            width: 3rem;
+            top: 1.5rem;
+            left: 0rem;
+            background-color: couleurs.$turquoise;
+        }
+    }
+    .menu__categorie {        
+        background: couleurs.$white;
+        border-radius: 1rem 1rem 1rem 1rem;
+        @include mix.shadows;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        animation: apparition 1s ease-in-out;
+        @for $i from 1 through 13 {
+            &:nth-child(#{$i}) {
+                animation-delay: 0.2s * $i;
+
+            }
+        }
+
+ 
+        .menu-dish {
+            display: flex;
+            white-space: nowrap;
+
+
+
+            .dish__description {
+                padding: 1rem;
+                overflow: hidden;
+                h4,
+                p {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+                }
+    
+                }
+            .price {
+                margin-left: auto;
+                font-weight:700;
+                padding: 1rem; 
+                display: flex;
+                align-items: flex-end;             
+                }
+            .dish__select {
+                background: couleurs.$turquoise;
+                color: couleurs.$white;
+                border-radius: 0 1rem 1rem 0rem;
+                width: 4rem;
+                margin-right: -4rem;
+                transition: margin .5s ease-in-out;
+                display: grid;
+                place-items: center;
+                flex-shrink: 0;
+                
+                }
+            .fa-circle-check {
+                font-size: 2rem;
+            }    
+            &:hover  {
+                cursor: pointer;
+                .dish__select {
+                    margin-right: 0;
+                }
+                i {
+                    animation: checkspin .8s ease-in-out;
+                }
+
+            }  
+        }  
+    } 
+
+}
+
+.commander {
+
+    display: grid;
+    place-items: center;
+    height: 15vh;
+
+    button {
+    
+        @include mix.button;
+        }
+    
+        & button:hover {
+    
+        opacity: 0.8;
+        box-shadow: 0 5px 5px -2px #000000;
+        cursor: pointer;
+        
+        }
+    }
+}
+
+

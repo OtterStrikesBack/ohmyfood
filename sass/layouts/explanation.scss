@@ -13,22 +13,15 @@
 
     & button {
 
-    border-radius: 40px;
-    //box-shadow: 0 4px 4px -2px gray;
-    @include mix.shadows;
-    color: white;
-    border: none;
-    height: 3.5em;
-    width: 15em;
-    font-size: 15px;
-    @include mix.gradient;
-    transition: opacity, 3s, ease-out, 1s;
+    
+    @include mix.button;
     }
 
     & button:hover {
 
-    opacity: 0.9;
+    opacity: 0.8;
     box-shadow: 0 5px 5px -2px #000000;
+    cursor: pointer;
     
     }
 
