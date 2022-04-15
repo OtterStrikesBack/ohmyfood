@@ -3,11 +3,13 @@
 
 .restaurants {
 
-    background-color: couleurs.$lightgrey;
+    background-color: couleurs.$lightergrey;
     padding: 0 3rem 5rem;
     margin-bottom: -3rem;
 
-
+    & h2 {
+        padding: 1.5rem 0rem;
+    }
     & .restaurants__carte {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

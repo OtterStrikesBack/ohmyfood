@@ -1,0 +1,25 @@
+@keyframes in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(50%);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes checkspin {
+    from {
+        transform: rotate(-280deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}

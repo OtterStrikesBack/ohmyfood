@@ -1,23 +1,7 @@
 @use "../utils/mix.scss";
 @use "../utils/couleurs.scss";
-@keyframes apparition {
-    from {
-        opacity: 0;
-    }
+@use "../utils/animations.scss";
 
-    to {
-        opacity: 1;
-    }
-}
-@keyframes checkspin {
-    from {
-        transform: rotate(-280deg);
-    }
-
-    to {
-        transform: rotate(0deg);
-    }
-}
 #restaurant-body{
 
 header::before{
@@ -82,10 +66,25 @@ header::before{
     
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: 1rem;
-        gap: 1rem;
-        @media (max-width:768px) {
-        grid-template-columns: repeat(1, 1fr);  
+        @media (max-width:800px) {
+        grid-template-columns: repeat(1, 1fr);
+        
+        }
+        .menu_grille {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 1rem;
+            gap: 1rem;
+            padding: 1rem;
+            animation: in 1.5s ease-in-out;
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: 0.1s * $i;
+
+            }
+        }
+          
         }
     h3 {
         text-transform: uppercase;
@@ -101,20 +100,14 @@ header::before{
             background-color: couleurs.$turquoise;
         }
     }
-    .menu__categorie {        
+    .menu__categorie { 
+               
         background: couleurs.$white;
         border-radius: 1rem 1rem 1rem 1rem;
         @include mix.shadows;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        animation: apparition 1s ease-in-out;
-        @for $i from 1 through 13 {
-            &:nth-child(#{$i}) {
-                animation-delay: 0.2s * $i;
-
-            }
-        }
 
  
         .menu-dish {
@@ -156,6 +149,7 @@ header::before{
                 }
             .fa-circle-check {
                 font-size: 2rem;
+                transition: size infinite;
             }    
             &:hover  {
                 cursor: pointer;
@@ -166,7 +160,8 @@ header::before{
                     animation: checkspin .8s ease-in-out;
                 }
 
-            }  
+            } 
+             
         }  
     } 
 

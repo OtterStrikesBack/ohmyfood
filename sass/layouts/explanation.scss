@@ -1,9 +1,14 @@
 @use "../utils/mix.scss";
+@use "../utils/couleurs.scss";
 
 .explanation {
 
+    background-color: couleurs.$lightergrey;
     text-align:center;
-
+    padding-bottom: 4rem;
+    & h2 {
+        padding: 1.5rem;
+    }
     & p {
 
     font-weight:300;

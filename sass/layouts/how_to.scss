@@ -5,6 +5,10 @@
 
     padding: 0 3rem;
     counter-reset: steps;
+
+    & h2 {
+        padding: 1.5rem 0rem;
+    }
     & ol {
         display: flex;
         gap: 2rem;
@@ -31,7 +35,7 @@
             top: 30%;
             left: -0.8rem;
         }
-        background-color: couleurs.$lightgrey;
+        background-color: couleurs.$lightergrey;
         padding: 1.3rem 2rem;
         flex-grow: 1;
         border-radius: 20px;
