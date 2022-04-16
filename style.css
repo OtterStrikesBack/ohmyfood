@@ -482,7 +482,6 @@ footer p {
 }
 #restaurant-body .menu .menu__categorie .menu-dish .fa-circle-check {
   font-size: 2rem;
-  transition: size infinite;
 }
 #restaurant-body .menu .menu__categorie .menu-dish:hover {
   cursor: pointer;
