@@ -124,7 +124,7 @@ header {
 .explanation {
   background-color: #f6f6f6;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 .explanation h2 {
   padding: 1.5rem;
@@ -133,6 +133,7 @@ header {
   font-weight: 300;
   margin-top: -1rem;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 .explanation button {
   border-radius: 40px;
@@ -152,7 +153,7 @@ header {
 }
 
 .how_to {
-  padding: 0 3rem;
+  padding: 0 5rem;
   counter-reset: steps;
 }
 .how_to h2 {
@@ -162,6 +163,7 @@ header {
   display: flex;
   gap: 2rem;
   list-style-type: none;
+  padding-bottom: 2rem;
 }
 @media (max-width: 780px) {
   .how_to ol {
@@ -261,6 +263,7 @@ header {
 }
 .restaurants .carte__description p {
   margin-top: -0.5rem;
+  padding-bottom: 1.5rem;
 }
 .restaurants .carte__description i {
   font-size: 1.8rem;
