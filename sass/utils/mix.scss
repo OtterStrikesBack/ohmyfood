@@ -10,6 +10,7 @@
     background-image: linear-gradient(45deg,#FF79DA,#9356DC)
 }
 
+
 @mixin button {
 
         border-radius: 40px;
@@ -23,18 +24,18 @@
         transition: opacity, 3s, ease-out, 1s;
         }
 
-        @mixin arrow-left {
+/**@mixin arrow-left {
 
-            display: inline-block;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            font: var(--fa-font-solid);
-            content: "\f060";
-            font-size: 1.5rem;
-            position: absolute;
-            color: #353535;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f060";
+    font-size: 1.5rem;
+    position: absolute;
+    color: #353535;
             
     
-          }
+          }**/
 
 

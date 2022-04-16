@@ -56,6 +56,71 @@ header {
   font-size: 1.3rem;
 }
 
+/**@mixin arrow-left {
+
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f060";
+    font-size: 1.5rem;
+    position: absolute;
+    color: #353535;
+
+
+          }**/
+@keyframes in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes checkspin {
+  from {
+    transform: rotate(-280deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadein {
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes bounce-1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bounce-2 {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce-3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
 .explanation {
   background-color: #f6f6f6;
   text-align: center;
@@ -127,15 +192,15 @@ header {
   top: 30%;
   left: -0.8rem;
 }
-.how_to li:hover {
-  background-color: #f5edff;
-}
-.how_to i {
+.how_to li i {
   margin-right: 1rem;
   color: #8f8b8b;
   transition: 0.3s;
 }
-.how_to i:hover {
+.how_to li:hover {
+  background-color: #f5edff;
+}
+.how_to li:hover i {
   color: #9356DC;
 }
 
@@ -158,15 +223,12 @@ header {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.restaurants .restaurants__carte .new:before {
-  content: "Nouveau";
+.restaurants .new {
   background-color: #99e2d0;
   color: #008766;
   position: absolute;
   left: 20rem;
   top: 1rem;
-  width: 5rem;
-  height: 2rem;
   font-size: 1rem;
   text-align: center;
   padding: 0.3rem 0.3rem;
@@ -234,34 +296,10 @@ footer p {
   padding: 0.4rem;
 }
 
-@keyframes in {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(50%);
-    opacity: 0.5;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+#restaurant-body header {
+  position: relative;
 }
-@keyframes checkspin {
-  from {
-    transform: rotate(-280deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-#restaurant-body header::before {
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font: var(--fa-font-solid);
-  content: "\f060";
+#restaurant-body header i {
   font-size: 1.5rem;
   position: absolute;
   color: #353535;
@@ -302,6 +340,7 @@ footer p {
   background-clip: text;
   -webkit-background-clip: text;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 #restaurant-body .menu_top:hover .animate {
   opacity: 1;
@@ -471,6 +510,33 @@ footer p {
   opacity: 0.8;
   box-shadow: 0 5px 5px -2px #000000;
   cursor: pointer;
+}
+
+.loading {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  place-items: center;
+  font-size: 3rem;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  opacity: 0.97;
+  animation: fadein 2s 2s ease-in-out forwards;
+}
+.loading .fa-bacon {
+  color: #FF79DA;
+  animation: bounce-1 0.35s ease infinite alternate;
+}
+.loading .fa-burger {
+  color: #99e2d0;
+  animation: bounce-2 0.35s ease infinite alternate;
+}
+.loading .fa-ice-cream {
+  color: #9356DC;
+  animation: bounce-3 0.35s ease infinite alternate;
 }
 
 /*# sourceMappingURL=style.css.map */

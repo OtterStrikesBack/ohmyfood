@@ -1,6 +1,7 @@
 @use "../utils/couleurs.scss";
 @use "../utils/mix.scss";
 
+
 .restaurants {
 
     background-color: couleurs.$lightergrey;
@@ -18,32 +19,32 @@
         }
         gap: 2rem;
         position: relative;
-        
-        .new:before {
-
-            content: "Nouveau";
-            background-color: couleurs.$turquoise;
-            color: couleurs.$green;
-            position: absolute;
-            left: 20rem;
-            top: 1rem;
-            width: 5rem;
-            height: 2rem;
-            font-size: 1rem;
-            text-align: center;
-            padding: 0.3rem 0.3rem;   
-        }
     
     }
 
+    & .new {
+
+        background-color: couleurs.$turquoise;
+        color: couleurs.$green;
+        position:absolute;
+        left: 20rem;
+        top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.3rem 0.3rem;   
+    }
+
     & .carte {
+         
 
         &__photo {
             height: 12rem;
             background-size: cover;
             border-radius: 15px 15px 0px 0px;
+            
 
         }
+
         
         @for $i from 1 through 4 {
             &__photo-#{$i}{

@@ -23,3 +23,26 @@
         transform: rotate(0deg);
     }
 }
+
+@keyframes fadein{
+    to {
+        opacity: 0;
+        z-index:-1;
+    }
+}
+
+@keyframes bounce-1{
+    from {transform: translateY(0);}
+    to   {transform: translateY(-20px);;}
+
+}
+
+@keyframes bounce-2{
+    from {transform: translateY(-20px);}
+    to   {transform: translateY(0px);}
+}
+
+@keyframes bounce-3{
+    from {transform: translateY(0);}
+    to   {transform: translateY(-20px);}
+}

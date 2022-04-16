@@ -1,0 +1,38 @@
+@use "../utils/animations.scss";
+@use "../utils/couleurs.scss";
+
+.loading {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    place-items: center;
+    font-size: 3rem;
+    background-color: couleurs.$white;
+    height: 100vh;
+    inset: 0;
+    opacity: 0.97;
+    animation: fadein 2s 2s ease-in-out forwards;
+
+        .fa-bacon {
+                
+                color: couleurs.$pink;
+                animation: bounce-1 0.35s ease infinite alternate;                
+        }
+
+        .fa-burger {
+
+                color: couleurs.$turquoise;
+                animation: bounce-2 0.35s ease infinite alternate;
+
+        }
+
+        .fa-ice-cream {
+
+            color: couleurs.$purple;
+            animation: bounce-3 0.35s ease infinite alternate;
+
+        }
+    
+}
