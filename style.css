@@ -229,7 +229,7 @@ header {
   background-color: #99e2d0;
   color: #008766;
   position: absolute;
-  left: 20rem;
+  right: 1rem;
   top: 1rem;
   font-size: 1rem;
   text-align: center;
@@ -239,6 +239,7 @@ header {
   height: 12rem;
   background-size: cover;
   border-radius: 15px 15px 0px 0px;
+  position: relative;
 }
 .restaurants .carte__photo-1 {
   background-image: url("../../images/photo-1.jpg");
