@@ -1,8 +1,12 @@
 {
   "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.50.0"
   },
   "scripts": {
-    "sass": "sass --watch style.scss style.css"
+    "sass": "sass --watch style.scss style.css",
+    "prefix": "postcss style.css -u autoprefixer -o ./autoprefixer/style.pre.css"
   }
 }
