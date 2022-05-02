@@ -71,3 +71,11 @@ Il s'agit du troisième projet "Développeur web" de OpenClassrooms. L'objectif 
 
 HTML, CSS, Sass, Autoprefixer, npm scripts.
 
+--- 
+
+## Tester le projet
+
+---
+
+Vous pouvez tester le projet directement à cette adresse : https://otterstrikesback.github.io/ohmyfood/
+
