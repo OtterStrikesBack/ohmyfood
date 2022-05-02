@@ -274,19 +274,19 @@ header {
   position: relative;
 }
 .restaurants .carte__photo-1 {
-  background-image: url("../../images/photo-1.jpg");
+  background-image: url("images/photo-1.jpg");
   background-position: center;
 }
 .restaurants .carte__photo-2 {
-  background-image: url("../../images/photo-2.jpg");
+  background-image: url("images/photo-2.jpg");
   background-position: center;
 }
 .restaurants .carte__photo-3 {
-  background-image: url("../../images/photo-3.jpg");
+  background-image: url("images/photo-3.jpg");
   background-position: center;
 }
 .restaurants .carte__photo-4 {
-  background-image: url("../../images/photo-4.jpg");
+  background-image: url("images/photo-4.jpg");
   background-position: center;
 }
 .restaurants .carte__description {
